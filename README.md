@@ -1,24 +1,26 @@
-# Design a Website for Server Side Processing
+## Design a Website for Server Side Processing
 ## AIM:
-
 To design a website to perform mathematical calculations in server side.
+
 ## DESIGN STEPS:
+## Step 1:
+Create a new django project and app.
 
-### Step 1: Clone the repository from GitHub
+## Step 2:
+Make on changes in settings and create templates folder.
 
-### Step 2: Create Django Admin project.
+## Step 3:
+Create a code for frontend of calculation using HTML and CSS and save it in templates
 
-### Step 3: Create a New App.
+## Step 4:
+Give an url mapping and write a python code for calculation in views.
 
-### Step 4: Create python programs for views and urls.
+## Step 5:
+Take a screenshotof the site and upload it.
 
-### Step 5: Create a HTML file of forms.
-
-### Step 6: Publish the website in the given URL
 ## PROGRAM :
-
-math.html
-
+## HTML
+```
 <html>
 <head>
 <meta charset='utf-8'>
@@ -82,9 +84,9 @@ Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br/
 </div>
 </body>
 </html>
-
-views.py
-
+```
+## views.py
+```
 from django.shortcuts import render
 def rectarea(request):
     context={}
@@ -104,9 +106,10 @@ def rectarea(request):
         context['b'] = b
         print('Area=',area)
     return render(request,'myapp/math.html',context)
+```
 
-urls.py
-
+## url.py
+```
 from django.contrib import admin
 from django.urls import path
 from myapp import views
@@ -114,13 +117,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('areaofrectangle/',views.rectarea,name="areaofrectangle"),
     path('',views.rectarea,name="areaofrectangleroot")
-] 
-
-
+]
+```
 ## OUTPUT:
 
-### Home Page:
+![Screenshot (42)](https://github.com/JAYAVARTHAN-P/mathserver/assets/121369281/3b45c4ed-0992-4b49-ad9b-21bdcbcd9fc9)
 
+## RESULT:
+Thus the program is developed to diplay Serverside Processing.
 
-## Result:
 
